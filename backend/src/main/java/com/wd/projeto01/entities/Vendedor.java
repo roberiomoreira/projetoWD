@@ -36,7 +36,5 @@ public class Vendedor {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-	
-	
+	}	
 }
