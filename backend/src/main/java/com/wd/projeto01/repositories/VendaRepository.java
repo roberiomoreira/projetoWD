@@ -4,8 +4,8 @@ package com.wd.projeto01.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.wd.projeto01.entities.Vendedor;
+import com.wd.projeto01.entities.Venda;
 
-public interface VendaRepository extends JpaRepository<Vendedor, Long>{
+public interface VendaRepository extends JpaRepository<Venda, Long>{
 
 }
