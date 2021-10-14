@@ -25,7 +25,8 @@ import com.wd.projeto01.services.VendedorService;
 public class VendedorController {
 	@Autowired
 	private VendedorService servVendedor;
-
+	
+	//GET, POST, PUT, DELETE
 	@GetMapping
 	public ResponseEntity<List<VendedorDto>> listarVendedores(){
 		List<VendedorDto> listaVendedores = servVendedor

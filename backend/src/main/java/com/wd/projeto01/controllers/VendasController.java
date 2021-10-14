@@ -25,6 +25,6 @@ public class VendasController {
 				.stream()
 				.map(x -> new VendasDto(x.getId(), x.getVisitas(), x.getQtdVendas())).collect(Collectors.toList());
 		return ResponseEntity.ok(listaVendas);
-		//oi
+		//oioi
 	}
 }
