@@ -3,4 +3,4 @@
 
 **Nesse projeto foi desenvolvido buscando utilizar o que há de mais novo no mercado.** 
 
-**O frontend foi feito em Angular e o frontend feito em Java e Spring Boot.**
+**O frontend foi feito em Angular e o backend feito em Java e Spring Boot.**
