@@ -10,25 +10,27 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
-@Table(name="tb_venda")
-public class Venda {
+@Table(name="tb_vendas")
+public class Vendas {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Integer id;	
 	private Integer visitas;
 	private Integer qtdVendas;
 	private Double valor;
-	private LocalDate data;
+	private LocalDate data;	
 	
 	@ManyToOne
-	@JoinColumn(name = "Vendedor_id")
+	@JoinColumn(name = "vendedor_id")
 	private Vendedor vendedor;
 	
-	public Venda() {}
+	public Vendas() {}
 
-	public Venda(Integer id, Integer visitas, Integer qtdVendas, Double valor, LocalDate data) {
+	public Vendas(Integer id, Integer visitas, Integer qtdVendas, Double valor, LocalDate data) {
 		super();
 		this.id = id;
 		this.visitas = visitas;
@@ -36,7 +38,7 @@ public class Venda {
 		this.valor = valor;
 		this.data = data;
 	}
-
+	
 	public Integer getId() {
 		return id;
 	}
@@ -75,5 +77,13 @@ public class Venda {
 
 	public void setData(LocalDate data) {
 		this.data = data;
+	}
+
+	public Vendedor getVendedor() {
+		return vendedor;
+	}
+
+	public void setVendedor(Vendedor vendedor) {
+		this.vendedor = vendedor;
 	}	
 }

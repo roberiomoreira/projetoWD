@@ -1,11 +1,14 @@
 package com.wd.projeto01.repositories;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 //essa interface vai lidar com o banco de dados
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.wd.projeto01.entities.Venda;
+import com.wd.projeto01.entities.Vendas;
 
-public interface VendasRepository extends JpaRepository<Venda, Integer>{
-
+public interface VendasRepository extends JpaRepository<Vendas, Integer>{
+	Page<Vendas> findAll(Pageable pageable);
 }
